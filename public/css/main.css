@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+html[theme="light"]
+{
+  --base-textColor: rgb(45, 51, 59);
+  --base-bold-textColor: rgb(40, 45, 52);
+  --base-bolder-textColor: rgb(34, 39, 46);
+
+  --base: white;
+  --base-dark: #eeeeee;
+  --base-darker: #e1e1e1;
+}
+
+html[theme="dark"]
+{
+  --base-textColor: #a9a9a9;
+  --base-bold-textColor: #cecece;
+  --base-bolder-textColor: #fff;
+
+  --base: rgb(45, 51, 59);
+  --base-dark: rgb(32, 36, 42);
+  --base-darker: rgb(21, 24, 30);
+}
+
+a
+{
+  color: currentColor;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: var(--base-bolder-textColor);
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .2s;
+}
+body
+{
+  padding: 1em;
+  font-family: Quicksand, sans-serif;
+  cursor: default;
+  user-select: none;
+  background: var(--base-darker);
+  color: var(--base-bold-textColor);
+}
+
+#themeSwitch
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--base);
+  width: 50px;
+  height: 50px;
+  border-radius: 0.25em;
+  font-size: 25px;
+  cursor: pointer;
+}
+#themeSwitch:hover
+{
+  background: var(--base-dark);
+}
+
+#github
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--base);
+  width: 50px;
+  height: 50px;
+  border-radius: 0.25em;
+  font-size: 25px;
+  cursor: pointer;
+}
+#github:hover
+{
+  background: var(--base-dark);
+}
+
+.copyright
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto auto;
+}
+
+.container
+{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.comp-select
+{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.comp-select .comp input
+{
+  display: none;
+}
+
+.comp-select .comp label
+{
+  padding: 0.25em;
+  display: flex;
+  border-radius: 0.25em;
+  background-color: var(--base);
+  opacity: 0.5;
+  cursor: pointer;
+}
+.comp-select .comp label:hover,
+.comp-select .comp input:checked + label
+{
+  opacity: 1;
+}
+.comp-select .comp label img
+{
+  width: 2.2em;
+  height: 2.2em;
+  object-fit: contain;
+}
+
+.comp-title
+{
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  color: var(--base-bolder-textColor);
+  margin-bottom: 10px;
+}
+.comp-title .comp-flag
+{
+  width: 1.75em;
+  height: 1.75em;
+  object-fit: cover;
+  border-radius: 0.25em;
+}
+
+.comp-loading
+{
+  display: none;
+}
+.comp-loading.load
+{
+  display: block;
+}
+.comp-loading img
+{
+  width: 3em;
+}
+
+.comp-table-container
+{
+  padding: 0.5em;
+  border: 0.1em solid var(--base-dark);
+  background-color:var(--base);
+  border-radius: 0.5em;
+}
+.comp-table
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+.comp-table tbody tr:hover
+{
+  background-color: var(--base-dark);
+}
+.comp-table tbody tr:not(:last-child)
+{
+  border-bottom: 0.1em solid var(--base-dark);
+}
+.comp-table th,
+.comp-table td
+{
+  text-align: center;
+  padding: 0.3em 0.75em;
+}
+.comp-table .team
+{
+  text-align: left;
+}
+.comp-table .team .name-short
+{
+  display: none;
+}
+.comp-table .team .name-full
+{
+  max-width: 20ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.comp-table-body td
+{
+  font-weight: 500;
+}
+
+.comp-table-body td.team
+{
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+.comp-table-body td.team img
+{
+  width: 1.5em;
+  height: 1.5em;
+  object-fit: contain;
+}
+
+.comp-table-container
+{
+  width: 100%;
+  font-size: 26px;
+}
+.comp-title
+{
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.comp-select .comp label img
+{
+  width: 50px;
+  height: 50px;
+}
+.name-short
+{
+  display: block !important;
+}
+.name-full
+{
+  display: none;
+}
+
+@media (max-width: 650px)
+{
+  .comp-table-container
+  {
+    font-size: 15px;
+  }
+  .comp-table th,
+  .comp-table td
+  {
+    text-align: center;
+    padding: 0.3em 0.5em;
+  }
+  .comp-title
+  {
+    text-align: center;
+    display: contents;
+    font-size: 20px;
+  }
+  .comp-select
+  {
+    width: 72%;
+  }
+  .comp-table .for,
+  .comp-table .against,
+  .comp-table .won,
+  .comp-table .drawn,
+  .comp-table .lost
+  {
+    display: none;
+  }
+
+  .copyright h2
+  {
+    font-size: 20px;
+  }
+
+}

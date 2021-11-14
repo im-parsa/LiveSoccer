@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+
+  "supportForTags": {
+    "@default": true,
+    "@allOf": true,
+    "@see": true,
+    "@deprecated": true
+  },
+
+  "tagDefinitions": [
+    {
+      "tagName": "@default",
+      "syntaxKind": "block",
+      "allowMultiple": false
+    },
+    {
+      "tagName": "@allOf",
+      "syntaxKind": "block",
+      "allowMultiple": false
+    }
+  ]
+}

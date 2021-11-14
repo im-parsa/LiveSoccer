@@ -1,0 +1,12 @@
+{
+  "target": "esnext",
+  "module": "commonjs",
+  "compilerOptions":
+  {
+    "esModuleInterop": true
+  },
+  "compilerSection":
+  {
+    "types": [ "node" ]
+  }
+}
