@@ -131,11 +131,13 @@ body
   opacity: 0.5;
   cursor: pointer;
 }
+
 .comp-select .comp label:hover,
 .comp-select .comp input:checked + label
 {
   opacity: 1;
 }
+
 .comp-select .comp label img
 {
   width: 2.2em;
